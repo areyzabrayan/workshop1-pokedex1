@@ -1,0 +1,72 @@
+/*!********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/styles/style.scss ***!
+  \********************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
+/*!************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/styles/style.scss (1) ***!
+  \************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
+/*!************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/styles/style.scss (2) ***!
+  \************************************************************************************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+  padding: 40px;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+}
+.header__nav h1 {
+  color: #08295e;
+}
+
+.button {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.button:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+.button--nav {
+  background-color: #08295e;
+  color: #fff;
+}
+.button--nav:hover {
+  border: 1px solid #08295e;
+  color: #08295e;
+}
+.button--success {
+  background-color: #99b333;
+  color: #fff;
+}
+.button--success:hover {
+  border: 1px solid #99b333;
+  color: #99b333;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.form__label {
+  font-size: 14px;
+  color: #08295e;
+  font-weight: 600;
+}
+.form__input {
+  padding: 5px 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #08295e;
+}
