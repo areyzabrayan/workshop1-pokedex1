@@ -22,7 +22,37 @@ import axios from "axios";
   const fiveImage = document.querySelector(".pokemonF");
   fiveImage.src = Eevee;
 
+<<<<<<< HEAD
   document.addEventListener('DOMContentLoaded', async () => {
     const response = await axios.get(URL_API);
     pokemonList = response.data.results;
 })
+=======
+const prueba = [];
+//Contenedor footer
+const contenedorFooter = document.getElementById('figura_imagenes')  
+
+//clase de las imagenes 
+const cargarImagenes = document.getElementsByClassName('cuadro-imagenes');
+
+const cargarImagenesFooter = () =>{
+  contenedorFooter.innerHTML = ``;
+  for (let index = 0; index < cargarImagenes.length; index++) {
+    if (i == 5) {
+      cargarImagenes.forEach(element => {
+        contenedorFooter.innerHTML= `
+          <img class="pokemon" src=${element.sprites.front_default} alt="Pikachu">
+          <img class="pokemon" src=${element.sprites.front_default} alt="Eevee">
+          <img class="pokemon" src=${element.sprites.front_default} alt="Charizard">
+          <img class="pokemon" src=${element.sprites.front_default} alt="Bulbasaur">
+         `;
+      }); 
+      break;
+    } 
+    
+  }
+
+}
+
+cargarImagenesFooter();
+>>>>>>> 511f63ebcf0745d7a5ce2dba532d3d9ed3d4fd20
