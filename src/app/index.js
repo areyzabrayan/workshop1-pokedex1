@@ -19,7 +19,7 @@ import Eevee from '../app/images/Eevee.webp';
   const fiveImage = document.querySelector(".pokemonF");
   fiveImage.src = Eevee;
 
-
+const prueba = [];
 //Contenedor footer
 const contenedorFooter = document.getElementById('figura_imagenes')  
 
