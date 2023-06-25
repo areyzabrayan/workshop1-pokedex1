@@ -1,5 +1,4 @@
 import "./styles/style.scss";
-<<<<<<< HEAD
 import { URL_API } from "./scripts/services/dataPokemons";
 import axios from 'axios';
 import bolaPokemon2 from '../app/images/bolaPokemon2.png';
@@ -23,12 +22,12 @@ import axios from "axios";
   const fiveImage = document.querySelector(".pokemonF");
   fiveImage.src = Eevee;
 
-<<<<<<< HEAD
+
   document.addEventListener('DOMContentLoaded', async () => {
     const response = await axios.get(URL_API);
     pokemonList = response.data.results;
 })
-=======
+
 const prueba = [];
 //Contenedor footer
 const contenedorFooter = document.getElementById('figura_imagenes')  
@@ -56,8 +55,7 @@ const cargarImagenesFooter = () =>{
 }
 
 cargarImagenesFooter();
->>>>>>> 511f63ebcf0745d7a5ce2dba532d3d9ed3d4fd20
-=======
+
 import  {URL_API}  from "./scripts/services/dataPokemons";
 const  axios = require ("axios");
 let input = undefined;
@@ -169,4 +167,4 @@ const filter = async (characters) => {
     print();
   }
 };
->>>>>>> Brayan
+
