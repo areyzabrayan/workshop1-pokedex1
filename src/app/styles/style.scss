@@ -76,7 +76,13 @@ body{
     position: relative;
     bottom: 60px;
 }
-.div_tabla{
+.div_tabla1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div_tabla2{
     display: flex;
     align-items: center;
     flex-direction: column;
