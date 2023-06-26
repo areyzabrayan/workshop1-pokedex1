@@ -1,15 +1,18 @@
 @import 'variables';
 
 @media (max-width: 550px){
+    #body{
+        height: 100%;
+    }
     .section-c{
         width: 100px;
         height: auto;
     }
     .imagen-section-b{
-        width: 150%;
+        width: 100px;
         height: auto;
         position: relative;
-        right: 80px;
+        right: 10px;
         z-index: 1;
     }
     .pokemon{
@@ -22,6 +25,7 @@
         justify-content: center;
         margin: 0;
         margin-top: 20px;
+        
     }
     .imagen-section-a {
         height: 70%;
@@ -33,12 +37,17 @@
     }
     .principal{
         align-items: center;
+        height: 100%;
     }
     .caja{
         display: flex;
         gap: 50px;
         justify-content: center;
         margin: 0;
+        
+    }
+    .section-c .caja{
+        width: 750px;
     }
     .texto_sec{
         font-size: 16px;
@@ -49,7 +58,9 @@
     }
     .section-union{
         flex-direction: column;
+        margin-top: 0px;  
     }
+   
     .section-c{
         width: 90%;
         height: 200px;
@@ -72,12 +83,16 @@
         margin: 0;
     }
     .cuadro-imagenes{
+        display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
         width: 50%;
         gap: 12px;
         
     }
     .imagenes{
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
     }
     .texto-a{
