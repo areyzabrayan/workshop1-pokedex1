@@ -1,130 +1,122 @@
 import "./styles/style.scss";
 
-import bolaPokemon2 from '../app/images/bolaPokemon2.png';
-import fuegoRojo from '../app/images/fuegorojo.webp';
+//Funcion para crear array aleatorio
+let idPokemones = [];
 
-import pikachu from '../app/images/pokemon4.png';
-import Eevee from '../app/images/Eevee.webp';
-import { URL_API } from "./scripts/services/dataPokemons";
-
-
-//Peticion
-const search = async (event) => {
-  event.preventDefault();
-  await filter(input.value);
+for (let i = 0; i < 5; i++) {
+  idPokemones.push(Math.floor(Math.random() * 1000) + 1);
 }
 
-const filter = async (characters) => {
+//Funcion para peticion axios 
+const getPokemonUrl = async (url) => {
+  const { data } = await axios.get(url);
+  return data;
+};
 
-  foundPokemons = [];
-  let filteredPokemon = pokemonList.filter(pokemon => pokemon.name.startsWith(characters));
+//Funion para accerder a la api con ID 
+const pokemones = [];
+
+for (let i = 0; i < 5; i++) {
+  pokemones.push(
+    await getPokemonUrl(
+      `https://pokeapi.co/api/v2/pokemon/${idPokemones[i]}`
+    )
+  );
+}
+console.log(pokemones);
+
+//Capturas DOM
+const contenedorA = document.getElementById('section-a')
+const contenedorB = document.getElementById('section-b')
+const contenedorC = document.getElementById('div_tabla2')
+const contenedorD = document.getElementById('cuadro-imagenes');
+
+//Funcion pintar tarjeta main de cada pokemon 
+const print = (pokemon) => {
+
+  contenedorA.innerHTML =``;
+  let htmlName = `
+            <h1 class="titulo_principal">${pokemon.name}</h1>
+             `
+  contenedorA.innerHTML = htmlName;      
+
+
+  contenedorB.innerHTML =``;
+  let htmlImage = `
+            <figure class="cuadro-imagen">
+            <img class="imagen-section-b" src=${pokemon.sprites.front_default} alt="pokemonPrincipal">
+            </figure>
+             `
+  contenedorB.innerHTML = htmlImage;    
+
+  contenedorC.innerHTML =``;
+  let htmlCaracters = `
+          <span class="texto-b">${pokemon.id}</span>
+          <span class="texto-b">${pokemon.base_experience
+          }</span>
+          <span class="texto-b">${pokemon.types[0].type.name}</span>
+          <span class="texto-b">${pokemon.abilities[0].ability.name}</span>
+          <span class="texto-b">${pokemon.height}</span>
+          <span class="texto-b">${pokemon.weight}</span>
+           `
+  contenedorC.innerHTML = htmlCaracters;   
+  
+}
+print(pokemones[0]);
+
+
+//Funcion printar tarjeras en el footer
+const printFooter = (pokemones) =>{
+
+  pokemones.forEach((element, index) => {
+  
+  let htmlFooter = `
+                <img class="pokemon" id="clickImagen${index}" src=${element.sprites.front_default} alt="Pikachu">
+                 `
+  contenedorD.innerHTML += htmlFooter; 
+  });
+
+}
+printFooter(pokemones);
+
+
+//Funcion dar click en imagenes footer y abrir tarjeta del pokemon en el main 
+const clickImagen = () => {
+
+  pokemones.forEach((element, index) => {
+    const idImagen = document.getElementById('clickImagen'+index)
+    idImagen.addEventListener('click',()=> {
+      print(element)
+    })
+    
+  });
+
+}
+clickImagen(); 
+
+
+//Funcion para buscar pokemon en input 
+const BotonBusqueda = () => {
+  const BotonBusqueda = document.getElementById('boton_busqueda'); 
+
+  BotonBusqueda.addEventListener('click', () =>{
+
+    const datoBusqueda = document.getElementById('busqueda_pokemon').value;
+
+        getPokemonUrl(
+          `https://pokeapi.co/api/v2/pokemon/${datoBusqueda}`
+         
+        ).then(data=> print(data)).catch(console.log('pokemon no encontrado'))
+        // then promesa cumplida y traer la data  
+  })
+}
+BotonBusqueda();
+
+
+
+
+
+
+
+
  
-  for (let i = 0; i < filteredPokemon.length; i++) {
-    if (i == 5) {
-      break;
-    }
-    const response = (await axios.get(filteredPokemon[i].url)).data;
-
-    foundPokemons.push(
-      {
-        Id: response.id,
-        name: filteredPokemon[i].name,
-        image: response.sprites.front_default,
-        level: response.base_experience,
-        type: response.types[0].type.name,
-        ability: response.abilities[0].ability.name,
-        height: response.height,
-        weight: response.weight,
-      }
-    );
-  }
-
-  search();
-
-
-
-
-// const infoPokemons = async(index) =>{
-//   datosPokemons = [];
-
-//   try{
-//     // const response = await axios.get(`${URL_API}${index}`);
-//     // const data = response.data;
-//     // return data;
-//     const response = (await axios.get(`${URL_API}${index}`)).data;
-
-//     datosPokemons.push(
-//       {
-//         Id: response.id,
-//         name: filteredPokemon[i].name,
-//         image: response.sprites.front_default,
-//         level: response.base_experience,
-//         type: response.types[0].type.name,
-//         ability: response.abilities[0].ability.name,
-//         height: response.height,
-//         weight: response.weight,
-//       }
-//     );
-//     console.log(datosPokemons)
-//   }
-//   catch(error){
-//     return error;
-//   }
-// }
-
-
-// const contenedorFooter = document.getElementById('figura_imagenes');
-// const imagenesPokemon = async ()=>{
-//   contenedorFooter.innerHTML = ``;
-//   for (let index = 0; index < 5; index++) {
-//     const dataPokemon = await infoPokemons(index)
-
-
-
-//   }
-
-// }
-
-
-// import pokemon3 from '../app/images/pokemon3.png';
-
-//   const firstImage = document.querySelector(".imagen-header");
-//   firstImage.src = bolaPokemon2;
-//   const seconImage = document.querySelector(".imagen-section-a");
-//   seconImage.src = fuegoRojo;
-
-//   // const threeImage = document.querySelector(".imagen-section-b");
-//   // threeImage.src = pokemon3;
-//   const fourImage = document.querySelector(".pokemon");
-//   fourImage.src = pikachu;
-//   const fiveImage = document.querySelector(".pokemonF");
-//   fiveImage.src = Eevee;
-
-// const prueba = [];
-//Contenedor footer
-
-
-//clase de las imagenes
-// const cargarImagenes = document.getElementsByClassName('cuadro-imagenes');
-
-// const cargarImagenesFooter = () =>{
-//   contenedorFooter.innerHTML = ``;
-//   for (let index = 0; index < cargarImagenes.length; index++) {
-//     if (i == 5) {
-//       cargarImagenes.forEach(element => {
-//         contenedorFooter.innerHTML= `
-//           <img class="pokemon" src=${element.sprites.front_default} alt="Pikachu">
-//           <img class="pokemon" src=${element.sprites.front_default} alt="Eevee">
-//           <img class="pokemon" src=${element.sprites.front_default} alt="Charizard">
-//           <img class="pokemon" src=${element.sprites.front_default} alt="Bulbasaur">
-//          `;
-//       });
-//       break;
-//     }
-
-//   }
-
-// }
-
-// cargarImagenesFooter();
-

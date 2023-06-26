@@ -3,25 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Document</title>
 </head>
 <body>
     <header class="encabezado">
         <figure class="imagen">
-            <img class="imagen-header" src="image.setAttribute('../app/images/bolaPokemon2.png', bolaPokemon2.png)" alt="bolaPokemon2">
+            <!-- <img class="imagen-header" src="image.setAttribute('../app/images/bolaPokemon2.png', bolaPokemon2.png)" alt="bolaPokemon2"> -->
         </figure>
 
         <h2 class="titulo_header">POKÉDEX</h2>
+
+        
     </header>
     
     <main class="principal">
-        <section class="section-a">
-            <h1 class="titulo_principal">MEWTWO</h1>
-            <img class="imagen-section-a" src="image.setAttribute('../app/images/fuegorojo.webp', fuegorojo.webp)" alt="fuegorojo">
+      <div class="search__input">      
+        <!-- <form id="form__search"> -->
+            <input type="text" class="input__pokemon" id="busqueda_pokemon"/>
+            <button id="boton_busqueda">search</button>
+        <!-- </form> -->
+    </div>
+        <section class="section-a" id="section-a">
+            <!-- <h1 class="titulo_principal">MEWTWO</h1>
+            <img class="imagen-section-a" src="image.setAttribute('../app/images/fuegorojo.webp', fuegorojo.webp)" alt="fuegorojo"> -->
         </section>
         
         <section class="section-union">
-            <section class="section-b">
+            <section class="section-b" id="section-b">
                 <!-- <figure class="cuadro-imagen">
                     <img class="imagen-section-b" src="image.setAttribute('../app/images/pokemon3.png', pokemon3.png)" alt="pokemonPrincipal">
                 </figure> -->
@@ -29,9 +38,9 @@
 
         <section class="section-c">
                 <article class="caja">
-                 <div class="div_tabla">
+                 <div class="div_tabla1">
                     <span class="texto-a">N°</span>
-                    <span class="texto-a">LEVEL</span>
+                    <span class="texto-a">EXPERIENCE</span>
 
                     <span class="texto-a">TYPE</span>
                     <span class="texto-a">HABILITY</span>
@@ -40,40 +49,27 @@
                     <span class="texto-a">WEIGHT</span>
                  </div>
 
-                 <div class="div_tabla">
-                    <span class="texto-b">006</span>
-                    <span class="texto-b">100</span>
-                    <span class="texto-b">FIRE</span>
-                    <span class="texto-b">FLAMES</span>
-                    <span class="texto-b">1.7 m</span>
-                    <span class="texto-b">90,5 Kg</span>
+                 <div class="div_tabla2" id="div_tabla2">
+                   <!-- Cargar propiedades de los pokemones -->
+
                  </div>
                 </article>
         </section>
     </main>
-
 
     <footer class="footer">
         <section class="titulo-footer">
             <h3 class="otros">OTHERS</h3>
         </section>
         <section class="imagenes">
-<<<<<<< HEAD
-            <figure class="cuadro-imagenes" id="figura_imagenes">
-                <!-- <img class="pokemon" src="../src/app/images/pokemon4.png" alt="Pikachu">
-                <img class="pokemon" src="../src/app/images/Eevee.webp" alt="Eevee">
-                <img class="pokemon" src="../src/app/images/pokemon6.png" alt="Charizard">
-=======
-            <figure class="cuadro-imagenes">
-                <img class="pokemon" src="image.setAttribute('../app/images/pokemon4.png', pokemon4.png)" alt="pikachu">
-                <img class="pokemonF" src="image.setAttribute('../app/images/Eevee.webp', Eevee.webp)" alt="Eevee">
-                <!-- <img class="pokemon" src="../src/app/images/pokemon6.png" alt="Charizard">
->>>>>>> Brayan
-                <img class="pokemon" src="../src/app/images/pokemon7.png" alt="Bulbasaur"> -->
+
+            <figure class="cuadro-imagenes" id="cuadro-imagenes">
+                <!-- cargar tarjetas (figuras) de los pokemones -->
+
             </figure>
         </section>      
     </footer>
 
-
 </body>
 </html>
+

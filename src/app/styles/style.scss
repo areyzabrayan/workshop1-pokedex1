@@ -1,6 +1,5 @@
 @import 'responsive';
 @import 'variables';
-@import 'mixings';
 
 :root{
     --azul: #0C005A;
@@ -68,7 +67,7 @@ body{
     border-radius: 20px;
     width: 35%;
     height: 100%;
-    margin-right: 70px;
+    margin-right: 0;
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
@@ -76,16 +75,24 @@ body{
     position: relative;
     bottom: 60px;
 }
-.div_tabla{
+.div_tabla1{
     display: flex;
     align-items: center;
     flex-direction: column;
 }
+
+.div_tabla2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .caja{
     display: flex;
     align-items: center;
     justify-content: space-around;
     gap: 40px;
+    width: 80%;
 }
 .texto-a{
     font-size: 20px;
