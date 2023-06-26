@@ -34,6 +34,25 @@ body{
     border: 1px solid black;
     flex-direction: column;
 }
+.search__input{
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    padding-left: 0px;
+}
+.input__pokemon{
+   border-radius: 10px;
+}
+#boton_busqueda{
+    border-radius: 10px;
+}
+#boton_busqueda:hover{
+    cursor: pointer;
+    background-color: #30336b;
+    color: white;
+}
 .section-a{
     width: 40%;
     height: 60px;
@@ -123,6 +142,10 @@ body{
 .pokemon{
     height: 100px;
     margin-right: 55px;
+}
+.pokemon:hover{
+    cursor: pointer;
+    transform: scale(1.2);
 }
 .imagenes{
     display: flex;
