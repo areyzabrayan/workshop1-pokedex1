@@ -106,11 +106,17 @@ const BotonBusqueda = () => {
         getPokemonUrl(
           `https://pokeapi.co/api/v2/pokemon/${datoBusqueda}`
          
-        ).then(data=> print(data)).catch(console.log('pokemon no encontrado'))
+        ).then(data=> print(data)).catch(
+          Swal.fire(
+            'Muy bien!',
+            'Pokemon encontrado!',           
+          ))
         // then promesa cumplida y traer la data  
   })
 }
 BotonBusqueda();
+
+
 
 
 
