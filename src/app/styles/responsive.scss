@@ -1,108 +1,108 @@
-@import 'variables';
+// @import 'variables';
 
-@media (max-width: 550px){
-    #body{
-        height: 100%;
-    }
-    .section-c{
-        width: 100px;
-        height: auto;
-    }
-    .imagen-section-b{
-        width: 100px;
-        height: auto;
-        position: relative;
-        right: 10px;
-        z-index: 1;
-    }
-    .pokemon{
-        height: 50%;
-        margin: 0;
-        padding: 0;
-    }
-    .section-a{
-        width: 70%;
-        justify-content: center;
-        margin: 0;
-        margin-top: 20px;
+// @media (max-width: 550px){
+//     #body{
+//         height: 100%;
+//     }
+//     .section-c{
+//         width: 100px;
+//         height: auto;
+//     }
+//     .imagen-section-b{
+//         width: 100px;
+//         height: auto;
+//         position: relative;
+//         right: 10px;
+//         z-index: 1;
+//     }
+//     .pokemon{
+//         height: 50%;
+//         margin: 0;
+//         padding: 0;
+//     }
+//     .section-a{
+//         width: 70%;
+//         justify-content: center;
+//         margin: 0;
+//         margin-top: 20px;
         
-    }
-    .imagen-section-a {
-        height: 70%;
-        width: auto;
-    }
-    .titulo_principal{
-        height: 70%;
+//     }
+//     .imagen-section-a {
+//         height: 70%;
+//         width: auto;
+//     }
+//     .titulo_principal{
+//         height: 70%;
 
-    }
-    .principal{
-        align-items: center;
-        height: 100%;
-    }
-    .caja{
-        display: flex;
-        gap: 50px;
-        justify-content: center;
-        margin: 0;
+//     }
+//     .principal{
+//         align-items: center;
+//         height: 100%;
+//     }
+//     .caja{
+//         display: flex;
+//         gap: 50px;
+//         justify-content: center;
+//         margin: 0;
         
-    }
-    .section-c .caja{
-        width: 750px;
-    }
-    .texto_sec{
-        font-size: 16px;
-        margin: 0;
-    }
-    .div_tabla{
-        margin: 0;
-    }
-    .section-union{
-        flex-direction: column;
-        margin-top: 0px;  
-    }
+//     }
+//     .section-c .caja{
+//         width: 750px;
+//     }
+//     .texto_sec{
+//         font-size: 16px;
+//         margin: 0;
+//     }
+//     .div_tabla{
+//         margin: 0;
+//     }
+//     .section-union{
+//         flex-direction: column;
+//         margin-top: 0px;  
+//     }
    
-    .section-c{
-        width: 90%;
-        height: 200px;
-        margin: 0;
-        margin-top: 10px;
-    }
-    .div_tabla{
-        gap: 8px;
-    }
-    .footer{
-        height: auto;
-        flex-direction: column;
-    }
-    .titulo-footer{
-        display: flex;
-        justify-content: center;
-        align-items:flex-start
-    }
-    .otros{
-        margin: 0;
-    }
-    .cuadro-imagenes{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        width: 50%;
-        gap: 12px;
+//     .section-c{
+//         width: 90%;
+//         height: 200px;
+//         margin: 0;
+//         margin-top: 10px;
+//     }
+//     .div_tabla{
+//         gap: 8px;
+//     }
+//     .footer{
+//         height: auto;
+//         flex-direction: column;
+//     }
+//     .titulo-footer{
+//         display: flex;
+//         justify-content: center;
+//         align-items:flex-start
+//     }
+//     .otros{
+//         margin: 0;
+//     }
+//     .cuadro-imagenes{
+//         display: flex;
+//         flex-direction: column;
+//         flex-wrap: wrap;
+//         width: 50%;
+//         gap: 12px;
         
-    }
-    .imagenes{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .texto-a{
-        font-size: 12px;
-        margin-top: 0;
-    }
-    .texto-b{
-        font-size: 12px;
-        margin-top: 0;
-    }
+//     }
+//     .imagenes{
+//         display: flex;
+//         flex-wrap: wrap;
+//         justify-content: center;
+//     }
+//     .texto-a{
+//         font-size: 12px;
+//         margin-top: 0;
+//     }
+//     .texto-b{
+//         font-size: 12px;
+//         margin-top: 0;
+//     }
    
-}
+// }
 
