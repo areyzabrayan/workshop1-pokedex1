@@ -165,3 +165,160 @@ body{
 }
 
 
+// @import 'variables';
+
+@media (max-width: 550px){
+
+    main{
+        height: 800px;
+    }
+    .section-union{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+    .section-a{
+        width: 40%;
+        height: 60px;
+        border: 0.5px solid rgb(0, 0, 0);
+        background-color: var(--blanco);
+        text-align: center;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .section-b{
+        border-radius: 20px;
+        width: 80%;
+        height: 40%;
+        margin-right: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-around;
+        justify-content: space-around;
+        // position: relative;
+        // bottom: 60px;
+        margin-bottom: 20px;
+    }
+    .cuadro-imagen{
+        height: 100%;
+    }
+    .imagen-section-b{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 1;
+    }
+  
+
+    .section-c{
+        background-color:var(--blanco);
+        border: 2px solid black;
+        border-radius: 20px;
+        width: 80%;
+        height: 50%;
+        margin-right: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-around;
+        justify-content: space-around;
+        // position: relative;
+        // bottom: 60px;
+        margin-top: 30rem;
+        font-size: 30px;
+    }
+    
+   
+    .pokemon{
+        height: 50%;
+        margin: 0;
+        padding: 0;
+    }
+   
+    .imagen-section-a {
+        height:70%;
+        width: auto;
+    }
+
+   
+    .titulo_principal{
+        height: 70%;
+
+    }
+    .principal{
+        align-items: center;
+    }
+    .caja{
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        margin: 0;
+    }
+    .texto_sec{
+        font-size: 16px;
+        margin: 0;
+    }
+    .div_tabla{
+        margin: 0;
+    }
+    .section-union{
+        flex-direction: column;
+    }
+    .section-c{
+        width: 80%;
+        height: 200px;
+        margin: 0;
+        margin-top: 10px;
+        bottom: 8rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-around;
+        justify-content: space-around;
+        position: relative;
+
+    }
+    .div_tabla{
+        gap: 8px;
+    }
+    .footer{
+        height: auto;
+        flex-direction: column;
+    }
+    .titulo-footer{
+        display: flex;
+        justify-content: center;
+        align-items:flex-start
+    }
+    .otros{
+        margin: 0;
+    }
+    .cuadro-imagenes{
+        flex-wrap: wrap;
+        width: 50%;
+        gap: 12px;
+        display: flex;
+        
+    }
+    .imagenes{
+        justify-content: center;
+        display: flex;
+        
+    }
+    .texto-a{
+        font-size: 12px;
+        margin-top: 0;
+    }
+    .texto-b{
+        font-size: 12px;
+        margin-top: 0;
+    }
+   
+}
+
